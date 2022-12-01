@@ -18,13 +18,13 @@ Module Program
         For index As Integer = 0 To length - 1
             i = index
             current = input(i)
-            If input(i) = "" Then
+            If IsNumeric(current) Then
+                total += Convert.ToInt32(current)
+            Else
                 If (total >= largest) Then
                     largest = total 'if larger than largest, make new largest
-                    total = 0
                 End If
-            Else
-                total += Convert.ToInt32(current)
+                total = 0
             End If
         Next
         If (total >= largest) Then
