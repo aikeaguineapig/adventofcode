@@ -27,6 +27,6 @@ for line in lines:
                 break
                 
         else:
-            four.append(
+            four.append(ch)
 print(marker)
 print(count)
